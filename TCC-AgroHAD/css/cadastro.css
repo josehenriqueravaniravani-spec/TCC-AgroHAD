@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg, #1b4332, #2d6a4f);
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+/* Área principal */
+.cadastro {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Card de cadastro */
+.cadastro-card {
+width: 100%;
+max-width: 430px;
+background-color: #ffffff;
+padding: 35px 40px;
+border-radius: 18px;
+box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+text-align: center;
+}
+
+/* Logo */
+.logo-area {
+display: flex;
+justify-content: center;
+margin-bottom: 12px;
+}
+
+.logo-area img {
+width: 90px;
+height: 90px;
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid #f4c430;
+}
+
+/* Título */
+h1 {
+color: #1b4332;
+font-size: 32px;
+margin-bottom: 5px;
+}
+
+/* Subtítulo */
+.subtitulo {
+color: #6b7280;
+font-size: 14px;
+margin-bottom: 28px;
+}
+
+/* Campos */
+.campo {
+text-align: left;
+margin-bottom: 18px;
+}
+
+.campo label {
+display: block;
+color: #1b4332;
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 7px;
+}
+
+.campo input {
+width: 100%;
+height: 45px;
+padding: 0 14px;
+border: 1px solid #d1d5db;
+border-radius: 9px;
+outline: none;
+font-size: 14px;
+background-color: #f9faf9;
+transition: 0.2s;
+}
+
+.campo input::placeholder {
+color: #9ca3af;
+}
+
+.campo input:focus {
+border-color: #2d6a4f;
+box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+background-color: #ffffff;
+}
+
+/* Botão */
+.btn-cadastrar {
+width: 100%;
+height: 46px;
+margin-top: 8px;
+border: none;
+border-radius: 9px;
+background-color: #2d6a4f;
+color: #ffffff;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.btn-cadastrar:hover {
+background-color: #1b4332;
+transform: translateY(-1px);
+}
+
+.btn-cadastrar:active {
+transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+.cadastro-card {
+padding: 30px 25px;
+}
+
+
+h1 {
+    font-size: 28px;
+}
+
+.logo-area img {
+    width: 80px;
+    height: 80px;
+}
+
+
+}
+
+
