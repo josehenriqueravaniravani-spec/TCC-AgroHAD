@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | AgroHAD</title>
+
+    <link rel="icon" type="image/png" href="../img/LogoAgroHAD.png">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <main class="login">
+
+        <section class="login-card">
+
+            <div class="logo-area">
+                <img src="../img/LogoAgroHAD.png" alt="Logo AgroHAD">
+            </div>
+
+            <h1>AgroHAD</h1>
+
+            <p class="subtitulo">
+                Sistema de gerenciamento de bovinos
+            </p>
+
+            <form id="formLogin">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <div class="opcoes">
+
+                    <label class="lembrar">
+                        <input type="checkbox">
+                        Lembrar minha senha
+                    </label>
+
+                    <a href="#">Esqueci minha senha</a>
+
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+                <p id="mensagem"></p>
+
+            </form>
+
+            <p class="cadastro">
+                Ainda não possui uma conta?
+                <a href="../telas/cadastro.html">Cadastre-se</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/login.js"></script>
+
+</body>
+
+</html>
+

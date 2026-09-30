@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro AgroHAD</title>
+
+    <link rel="icon" type="image/png" href="../img/LogoAgroHAD.png">
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+</head>
+
+<body>
+
+    <!-- Conteúdo da página de cadastro -->
+
+    <main class="cadastro">
+
+        <section class="cadastro-card">
+
+            <div class="logo-area">
+
+                <img src="../img/LogoAgroHAD.png" alt="Logo AgroHAD">
+
+            </div>
+
+            <h1>AgroHAD</h1>
+
+            <p class="subtitulo">
+                Sistema de gerenciamento de bovinos
+            </p>
+
+            <form id="formCadastro">
+
+                <div class="campo">
+
+                    <label for="nome">Nome</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="confirmarEmail">Confirmar e-mail</label>
+
+                    <input
+                        type="email"
+                        id="confirmarEmail"
+                        name="confirmarEmail"
+                        placeholder="Confirme seu e-mail"
+                        required
+                    >
+
+                    <small id="erroEmail"></small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="confirmarSenha">Confirmar senha</label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        placeholder="Confirme sua senha"
+                        required
+                    >
+
+                    <small id="erroSenha"></small>
+
+                </div>
+
+
+                <p id="mensagemCadastro"></p>
+
+
+                <button type="submit" class="btn-cadastrar">
+                    Cadastrar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Tela de carregamento -->
+
+    <div id="loading" class="loading">
+
+        <div class="loading-card">
+
+            <div class="spinner"></div>
+
+            <p>Cadastrando...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/cadastro.js"></script>
+
+</body>
+
+</html>
+
