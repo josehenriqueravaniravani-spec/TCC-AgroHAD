@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,26 +8,14 @@
 
     <title>AgroHAD</title>
 
-    <link rel="icon" type="image/png" href="img/logoAgroHAD.png">
-
-
-    <!-- Bootstrap -->
+    <link rel="icon" type="image/png" href="img/LogoAgroHAD.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-
-        /* =========================
-           GERAL
-        ========================= */
-
         body {
-            background-color: #f3f6f1;
+            background-color: #f8f9f7;
+            color: #343a34;
         }
-
-
-        /* =========================
-           MENU
-        ========================= */
 
         .menu {
             background-color: #173b24;
@@ -34,179 +23,142 @@
 
         .logo {
             font-size: 24px;
+            letter-spacing: 0.5px;
         }
-
-
-        /* =========================
-           BANNER PRINCIPAL
-        ========================= */
 
         .banner {
             background: linear-gradient(135deg, #173b24, #2f6b3c);
             color: white;
-            padding: 80px 0;
+            padding: 65px 0;
         }
 
         .banner h1 {
-            font-size: 55px;
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.2;
         }
 
         .banner span {
             color: #f2c94c;
         }
 
-
-        /* =========================
-           BOTÃO PRINCIPAL
-        ========================= */
-
         .btn-principal {
             background-color: #f2c94c;
             color: #173b24;
-            font-weight: bold;
             border: none;
+            font-weight: 600;
         }
 
         .btn-principal:hover {
-            background-color: #dcae27;
+            background-color: #dfb735;
             color: #173b24;
         }
-
-
-        /* =========================
-           TÍTULOS
-        ========================= */
 
         .titulo {
             color: #173b24;
-            font-weight: bold;
+            font-weight: 700;
         }
-
-
-        /* =========================
-           SEÇÃO SOBRE
-        ========================= */
 
         .sobre {
-            background-color: #ece8e880;
-            padding: 60px 0;
+            background-color: #eef2ec;
         }
 
+        .destaque {
+            background-color: #dce7da;
+            border: 1px solid #d1dfcf;
+        }
 
-        /* =========================
-           CARDS
-        ========================= */
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            transition: 0.3s;
+        .card-recurso {
+            border: 1px solid #e6eae4;
+            border-radius: 16px;
             height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .card-recurso:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.5rem 1.5rem rgba(23, 59, 36, 0.10);
         }
 
         .card-titulo {
             color: #173b24;
-            font-weight: bold;
-        }
-
-        .card-imagem {
-            font-size: 40px;
+            font-weight: 700;
         }
 
         .card-imagem img {
             width: 80px;
             height: 80px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
         }
-
-
-        /* =========================
-           IMAGEM PRINCIPAL
-        ========================= */
 
         .imagem-gado {
+            width: 100%;
             max-width: 350px;
             height: 350px;
-            border-radius: 49%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.18);
         }
 
-
-        /* =========================
-           RODAPÉ
-        ========================= */
+        .chamada {
+            background-color: #e8f0e5;
+        }
 
         .rodape {
             background-color: #173b24;
             color: white;
-            padding: 25px 0;
         }
 
-       
+        @media (max-width: 767px) {
+            .banner {
+                padding: 45px 0;
+            }
 
+            .imagem-gado {
+                height: 260px;
+                max-width: 260px;
+                margin-top: 30px;
+            }
+
+            .menu .container {
+                gap: 12px;
+            }
+        }
     </style>
 </head>
 
-
 <body>
 
+    <nav class="menu navbar navbar-dark">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
 
-    <!-- =========================
-         MENU
-    ========================= -->
-
-    <nav class="menu navbar navbar-expand-lg navbar-dark">
-
-        <div class="container">
-
-            <a class="logo navbar-brand fw-bold" href="index.html">
+            <a class="logo navbar-brand fw-bold mb-0" href="index.html">
                 Agro<span style="color: #f2c94c;">HAD</span>
             </a>
 
-            <div>
-
-                <a class="btn btn-outline-light btn-sm me-2"
-                   href="index.html">
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-light btn-sm" href="index.html">
                     Início
                 </a>
 
-                <a class="btn btn-outline-light btn-sm me-2"
-                   href="telas/login.html">
+                <a class="btn btn-outline-light btn-sm" href="telas/login.html">
                     Login
                 </a>
 
-                <a class="btn btn-outline-light btn-sm me-2"
-                   href="telas/cadastro.html">
+                <a class="btn btn-outline-light btn-sm" href="telas/cadastro.html">
                     Cadastro
                 </a>
-
-    
             </div>
 
         </div>
-
     </nav>
 
-
-    <!-- =========================
-         BANNER PRINCIPAL
-    ========================= -->
-
     <section class="banner">
-
         <div class="container">
-
-            <div class="row align-items-center">
-
-                <!-- TEXTO -->
+            <div class="row align-items-center g-4">
 
                 <div class="col-md-7">
-
-                    <p class="text-uppercase fw-bold">
+                    <p class="text-uppercase fw-bold small mb-3">
                         Tecnologia no campo
                     </p>
 
@@ -215,274 +167,157 @@
                         <span>rebanho</span>
                     </h1>
 
-                    <p class="lead mt-4">
-                        O AgroHAD é um sistema desenvolvido para
-                        auxiliar pequenos produtores no gerenciamento
-                        de bovinos leiteiros.
+                    <p class="lead mt-4 mb-0">
+                        O AgroHAD é um sistema desenvolvido para auxiliar pequenos produtores no gerenciamento de bovinos leiteiros.
                     </p>
 
-                    <a href="telas/login.html"
-                       class="btn btn-principal btn-lg mt-3">
+                    <a href="telas/login.html" class="btn btn-principal btn-lg mt-4 px-4">
                         Acessar sistema
                     </a>
-
                 </div>
 
-
-                <!-- IMAGEM -->
-
                 <div class="col-md-5 text-center">
-
                     <img src="img/Gir-Leiteiro-2.jpg"
                          class="imagem-gado"
                          alt="Bovinos leiteiros">
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         SOBRE
-    ========================= -->
-
-    <section class="sobre">
-
+    <section class="sobre py-5">
         <div class="container">
-
-            <div class="row align-items-center">
-
-                <!-- TEXTO -->
+            <div class="row align-items-center g-4">
 
                 <div class="col-md-6">
-
                     <h2 class="titulo">
                         Mais organização para o produtor
                     </h2>
 
                     <p class="mt-3">
-                        O AgroHAD foi pensado para facilitar o
-                        gerenciamento das informações do rebanho
-                        bovino leiteiro.
+                        O AgroHAD foi pensado para facilitar o gerenciamento das informações do rebanho bovino leiteiro.
                     </p>
 
-                    <p>
-                        A plataforma permite organizar dados dos
-                        animais, acompanhar a vacinação e consultar
-                        informações relacionadas à produção de leite.
+                    <p class="mb-0">
+                        A plataforma permite organizar dados dos animais, acompanhar a vacinação e consultar informações relacionadas à produção de leite.
                     </p>
-
                 </div>
 
-
-                <!-- DESTAQUE -->
-
                 <div class="col-md-6">
-
-                    <div class="p-4 rounded-4"
-                         style="background-color: #d6ded5;">
-
-                        <h4 class="fw-bold"
-                            style="color: #173b24;">
+                    <div class="destaque p-4 p-md-5 rounded-4">
+                        <h4 class="titulo">
                             Por que utilizar o AgroHAD?
                         </h4>
 
-                        <p class="mt-3">
-                            Centralizar as informações do rebanho
-                            facilita o acompanhamento dos animais
-                            e contribui para uma gestão mais
-                            organizada da propriedade.
+                        <p class="mt-3 mb-0">
+                            Centralizar as informações do rebanho facilita o acompanhamento dos animais e contribui para uma gestão mais organizada da propriedade.
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         RECURSOS
-    ========================= -->
 
     <section class="container py-5">
 
         <div class="text-center mb-5">
-
-            <p class="text-uppercase fw-bold"
-               style="color: #b58b16;">
+            <p class="text-uppercase fw-bold small mb-2" style="color: #9b7916;">
                 Principais recursos
             </p>
 
             <h2 class="titulo">
                 Tudo organizado em um só lugar
             </h2>
-
         </div>
-
 
         <div class="row g-4">
 
-
-            <!-- =========================
-                 CARD 1 - REBANHO
-            ========================= -->
-
             <div class="col-md-4">
-
-                <div class="card shadow-sm">
-
-                    <div class="card-body p-4">
-
+                <div class="card-recurso bg-white shadow-sm">
+                    <div class="p-4">
                         <div class="card-imagem mb-3">
-
-                            <img src="img/nelore.png"
-                                 alt="Bovino da raça Nelore">
-
+                            <img src="img/nelore.png" alt="Bovino da raça Nelore">
                         </div>
 
                         <h5 class="card-titulo">
                             Gerenciamento do rebanho
                         </h5>
 
-                        <p class="card-text">
-                            Cadastre e acompanhe informações dos
-                            bovinos, como nome, peso, idade,
-                            tamanho e raça.
+                        <p class="mb-0">
+                            Cadastre e acompanhe informações dos bovinos, como nome, peso, idade, tamanho e raça.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- =========================
-                 CARD 2 - VACINAÇÃO
-            ========================= -->
-
             <div class="col-md-4">
-
-                <div class="card shadow-sm">
-
-                    <div class="card-body p-4">
-
+                <div class="card-recurso bg-white shadow-sm">
+                    <div class="p-4">
                         <div class="card-imagem mb-3">
-                            <img src="img/vacina-bovino.webp"
-                                 alt="Vacina Bovino">
+                            <img src="img/vacina-bovino.webp" alt="Vacinação bovina">
                         </div>
 
                         <h5 class="card-titulo">
                             Controle de vacinação
                         </h5>
 
-                        <p class="card-text">
-                            Registre as vacinas aplicadas,
-                            doses, responsáveis e próximas
-                            datas de aplicação.
+                        <p class="mb-0">
+                            Registre as vacinas aplicadas, doses, responsáveis e próximas datas de aplicação.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- =========================
-                 CARD 3 - PRODUÇÃO
-            ========================= -->
-
             <div class="col-md-4">
-
-                <div class="card shadow-sm">
-
-                    <div class="card-body p-4">
-
+                <div class="card-recurso bg-white shadow-sm">
+                    <div class="p-4">
                         <div class="card-imagem mb-3">
-                            <img src="img/producaoimagem.jpg"
-                                 alt="Imagem de produção leiteira">
+                            <img src="img/producaoimagem.jpg" alt="Produção leiteira">
                         </div>
 
                         <h5 class="card-titulo">
                             Produção de leite
                         </h5>
 
-                        <p class="card-text">
-                            Acompanhe a produção média de leite
-                            dos animais e organize os dados
-                            produtivos do rebanho.
+                        <p class="mb-0">
+                            Acompanhe a produção média de leite dos animais e organize os dados produtivos do rebanho.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
 
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         CHAMADA FINAL
-    ========================= -->
-
-    <section class="py-5"
-             style="background-color: #e4f0e3;">
-
+    <section class="chamada py-5">
         <div class="container text-center">
-
             <h2 class="titulo">
                 Comece a organizar seu rebanho
             </h2>
 
             <p class="mt-3">
-                Acesse o sistema para consultar e gerenciar
-                as informações dos animais.
+                Acesse o sistema para consultar e gerenciar as informações dos animais.
             </p>
 
-            <a href="telas/login.html"
-               class="btn btn-success btn-lg">
+            <a href="telas/login.html" class="btn btn-success btn-lg px-4 mt-2">
                 Entrar no AgroHAD
             </a>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         RODAPÉ
-    ========================= -->
-
-    <footer class="rodape">
-
+    <footer class="rodape py-4">
         <div class="container text-center">
-
             <p class="mb-1 fw-bold">
                 AgroHAD
             </p>
 
-            <p class="mb-0">
+            <p class="mb-0 small">
                 Sistema de Gerenciamento de Bovinos
             </p>
-
         </div>
-
     </footer>
-
 
 </body>
 
